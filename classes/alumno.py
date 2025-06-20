@@ -10,6 +10,10 @@ class Alumno:
         self.boleta_id = boleta_id
 
     def save(self):
+        if alumnos_collection.find_one({"matricula": self.matricula}):
+            print("Ya existe un alumno con esa matrícula. No se guardó.")
+            return None
+
         data = {
             "nombre": self.nombre,
             "matricula": self.matricula,

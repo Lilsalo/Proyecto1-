@@ -8,7 +8,7 @@ class TestRelacionUnoAUno(unittest.TestCase):
 
     def test_guardado_y_actualizacion(self):
         # Crear y guardar Alumno
-        alumno = Alumno("Marlon Marineros", "20212031403", "Medicina", "MarlonMarineros@unah.")
+        alumno = Alumno("Diego Elvir", "20212231403", "Medicina", "DiegoElvir@unah.")
         alumno_id = alumno.save()
         print(f"Alumno guardado con ID: {alumno_id}")
 
