@@ -2,9 +2,9 @@ from conexion import boletas_collection
 from bson.objectid import ObjectId
 
 class BoletaCalificaciones:
-    def __init__(self, promedio_general, anio_lectivo, materias_aprobadas, materias_reprobadas, alumno_id=None):
+    def __init__(self, promedio_general, año_lectivo, materias_aprobadas, materias_reprobadas, alumno_id=None):
         self.promedio_general = promedio_general
-        self.anio_lectivo = anio_lectivo
+        self.año_lectivo = año_lectivo
         self.materias_aprobadas = materias_aprobadas
         self.materias_reprobadas = materias_reprobadas
         self.alumno_id = alumno_id
@@ -12,7 +12,7 @@ class BoletaCalificaciones:
     def save(self):
         data = {
             "promedio_general": self.promedio_general,
-            "anio_lectivo": self.anio_lectivo,
+            "año_lectivo": self.año_lectivo,
             "materias_aprobadas": self.materias_aprobadas,
             "materias_reprobadas": self.materias_reprobadas,
             "alumno_id": self.alumno_id
